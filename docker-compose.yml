@@ -1,0 +1,24 @@
+version: '2.2'
+services:
+  xmrig:
+    build: .
+    image: valentinvieriu/xmrig-cpu:v2.4.2
+    # cpuset: '2,3,4,5,6,7'
+    # privileged: true
+    restart: always
+    # entrypoint: "/bin/sh -c"
+    command: " \
+    --algo=${POOL_ALGO} \
+    --url=${POOL_ADDRESS} \
+    --userpass=${POOL_USER}:${POOL_PASSWORD} \
+    --api-port=${PORT} \
+    --av=${POOL_AV} \
+    --max-cpu-usage=100 \
+    \
+    "
+    ports: 
+      - 9999:9999
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
