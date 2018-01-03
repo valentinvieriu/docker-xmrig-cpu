@@ -3,7 +3,7 @@
 ###
 FROM alpine:edge AS build
 
-ENV XMRIG_VERSION v2.4.2
+ENV XMRIG_VERSION v2.4.3
 
 WORKDIR /usr/local/src
 

@@ -2,7 +2,7 @@ version: '2.2'
 services:
   xmrig:
     build: .
-    image: valentinvieriu/xmrig-cpu:v2.4.2
+    image: valentinvieriu/xmrig-cpu:v2.4.3
     # cpuset: '2,3,4,5,6,7'
     # privileged: true
     restart: always
